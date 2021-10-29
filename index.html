@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <!-- Coloca o tipo de Caracteres -->
+    <meta charset="UTF-8" />
+
+    <!-- Compatibilidade -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Adequação de Largura e Altura de acordo com o tipod e aparelho que está Utilizando -->
+    <!-- Adequação da escala de visualização da Página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da Página (Nome que fica na Aba) -->
+    <title>Beauty Salon.</title>
+
+    <!-- Colocar o CSS Para Atuar Com o HTML -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Colocar as Fontes que Serão Ultilizadas na Página-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Cabeçalho da Página que fica fixo, com ID: "header" -->
+    <header id="header">
+      <!-- Ambiente de navegação da logo e do Menu, com classe: "container" -->
+      <nav class="container">
+        <!-- Link/Título da Página, com classe: "logo"-->
+        <h1 class="logo">Beauty<span>Salon</span></h1>
+
+        <!-- Aqui inicia o Menu -->
+        <div class="menu">
+          <!-- Lista Não Ordenada dos Itens do Menu -->
+          <ul class="grid">
+            <!--Lista de Itens do Menu, com Classe: "title" -->
+            <li><a class="title-menu" href="#home">Início</a></li>
+            <li><a class="title-menu" href="#about">Sobre</a></li>
+            <li><a class="title-menu" href="#services">Serviços</a></li>
+            <li><a class="title-menu" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title-menu" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <!-- Aqui finaliza o Menu -->
+
+        <!-- Aqui Abre o menu -->
+        <div class="open">...</div>
+        <!-- Aqui Fecha o Menu -->
+        <div class="close">x</div>
+      </nav>
+    </header>
+
+    <!-- Corpo da Página -->
+
+    <main>
+      <!-- 1° Seção da Página: "home", com classe: "section" e ID: "home"-->
+      <section class="section" id="home">
+        <!-- Caixa que contém todo o Conteúdo do Home -->
+        <div class="container grid">
+          <!-- Caixa Para colocar a Caixa da Imagem da Seção Home-->
+          <div class="image">
+            <img
+              src="https://media.istockphoto.com/photos/woman-sitting-on-sofa-with-pair-of-shoes-on-floor-portrait-picture-id73224107?b=1&k=20&m=73224107&s=170667a&w=0&h=fVqB8H9716s-aQAo76yZdKUNUYmaU5Uk4N8cLxM-vnk="
+              alt="Mulher com uma coleção de Sapatos"
+            />
+          </div>
+
+          <!-- Caixa Para Todo o Conteúdo Escrito da Seção Home -->
+          <div class="text">
+            <!-- SubTítulo da Seção Home -->
+            <h2 class="title">
+              Os melhores e maravilhosos saltos só para VOCÊ!!!
+            </h2>
+
+            <!-- Todo o Conteúdo escrito da Seção Home -->
+            <p>
+              Escolha seus maravilho salto do jeitinho que você sempre sonhou!!
+            </p>
+
+            <!--Botão para entrar em contato -->
+            <a class="button" href="#">Fale com a gente agora mesmo!</a>
+          </div>
+        </div>
+      </section>
+      <!-- Divisão entre a Home e About -->
+      <div class="divider"></div>
+
+      <!-- 2° Seção da Página: "about", com classe: "section" e ID: "about"-->
+      <section class="section" id="about">
+        <!-- Caixa que contém todo o Conteúdo de About -->
+        <div class="container grid">
+          <!-- Caixa para a Imagem da Seção About-->
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="três mulheres com instrumentos de beleza"
+            />
+          </div>
+
+          <!-- SubTítulo de About -->
+          <h2 class="title">Sobre nós</h2>
+
+          <!-- Todo o conteúdo escrito de About -->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            sagittis arcu quis nisi luctus, id accumsan felis tristique. Proin
+            quis bibendum diam. Sed consequat nisl laoreet eros ultricies
+            pellentesque. Nullam in est porta, pellentesque massa vitae,
+            vehicula risus. In placerat, felis vitae sodales dictum, lacus quam
+            pretium mi, ut pretium urna turpis eu dui. Vestibulum id ullamcorper
+            nibh. Donec luctus, nunc finibus elementum suscipit, tortor augue
+            vulputate sapien, vitae feugiat enim augue sed. Quisque id aliquam
+            elit. Suspendisse congue pharetra maximus. Duis rutrum velit a leo
+            euismod dictum. Sed sodales est efficitur arcu tincidunt tincidunt.
+            Curabitur fringilla, risus at feugiat feugiat, nisl nulla tincidunt
+            tellus, elementum elementum lorem nisl eleifend dolor. Nullam eget
+            dui at sem ullamcorper luctus.
+          </p>
+        </div>
+      </section>
+      <!-- Divisão entre a About e Services -->
+      <div class="divider"></div>
+
+      <!-- 3° Seção da Página: "services", com classe: "section" e ID: "services"-->
+      <section class="section" id="services">
+        <!-- Caixa que contém todo o Conteúdo de Services-->
+        <div class="container grid">
+          <!-- Todo o conteúdo escrito de Services -->
+          <div class="text">
+            <!-- SubTítulo de Services -->
+            <h2 class="title">Serviços</h2>
+
+            <!-- Corpo do texto escrito -->
+            <p>
+              Com mais de 10 anos no mercado, o Beautysalon já conquistou
+              clientes de inúmeros países com seus tratamentos exclusivos e
+              totalmente naturais!
+            </p>
+
+            <!-- Aqui inicia as caixas de Ícones -->
+            <!-- Conteúdo que está dentro de caixas de Ícones -->
+            <div class="icons">
+              <!-- Icone de "Terapia Capilar" -->
+              <div class="terapia">
+                <!--SubTítulo de "Terapia Capilar" -->
+                <h3>Terapia Capilar</h3>
+
+                <!-- Corpo do Texto de "Terapia Capilar" -->
+                <p>
+                  Terapia completa para couro cabeludo e fios, protegendo todos
+                  os tipos de cabelos, inculise os longos e finos
+                </p>
+              </div>
+
+              <!-- Icone de "Cortes" -->
+              <div class="cortes">
+                <!--SubTítulo de "Cortes" -->
+                <h3>Cortes</h3>
+
+                <!-- Corpo do texto de "Cortes" -->
+                <p>
+                  A nossa equipe é repleta de profissionais renomados, famosos
+                  por lançarem tendências com cortes diferenciados e clássicos.
+                </p>
+              </div>
+
+              <!-- Icone de "Tratamentos" -->
+              <div class="tratamentos">
+                <!-- SubTítulo de "Tratamentos" -->
+                <h3>Tratamentos</h3>
+
+                <!-- Corpo do texto de "Tratamentos" -->
+                <p>
+                  O beautysalon conta com diversos tratamentos naturais e
+                  totalmente veganos, para qualquer tipo de cabelo.
+                </p>
+              </div>
+              <!-- Aqui Finaliza as caixas de Ícones -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Divisão entre a Services e Testimonials -->
+      <div class="divider"></div>
+
+      <!-- 4° Seção da Página: "testimonials", com classe: "section" e ID: "testimonials"-->
+      <section class="section" id="testimonials">
+        <!-- Caixa que contém todo o conteúdo de "Testimonials" -->
+        <div class="container grid">
+          <!-- SubTítulo de "Testimonials"-->
+          <div class="sub-title">
+            <h2 class="title">Depoimentos de quem já passou por aqui!</h2>
+          </div>
+
+          <!-- Depoimento de Cliente -->
+          <div class="indications">
+            <!-- Corpo do texto do Depoimento de "Testimonials" -->
+            <div class="text">
+              <!-- Texto e Imagem do Corpo do Texto de "Testimonials" -->
+              <p>
+                <img src="#" alt="" />Eu sou cliente do Beautysalon há 5 anos e
+                não troco por nada! Certamente meu cabelo mudou muito depois que
+                comecei a tratar somente com produtos naturais e veganos. São
+                profissionais incríveis e qualificados.
+              </p>
+            </div>
+
+            <!-- Cliente de "Testimonials" -->
+            <div class="client">
+              <!-- Imagem e Nome de Cliente de "Testimonials" -->
+              <p>
+                <br />
+                <img src="#" alt="" />
+                Wanessa Souza
+              </p>
+            </div>
+          </div>
+
+          <!-- Dots -->
+          <div class="dots">...</div>
+        </div>
+      </section>
+      <!-- Divisão entre a Testimonials e Contact -->
+      <div class="divider"></div>
+
+      <!-- 5° Seção da Página: "contact", com classe: "section" e ID: "Contact"-->
+      <section class="section" id="contact">
+        <!-- Caixa que contém todo o Conteúdo de "Contact" -->
+        <div class="container grid">
+          <!-- Contém todo o Conteúdo Escrito de "Contact"-->
+          <div class="text">
+            <!-- SubTítulo de "Contact" -->
+            <h2 class="title">Entre em Contato com a gente!</h2>
+
+            <!-- Corpo do texto de "Contact" -->
+            <p>
+              Entre em contato com a BeautySalon. queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões!
+            </p>
+
+            <!-- Botão de Entrar em Contato -->
+            <div class="whatsapp-1">
+              <!-- O Ícone do WhatsApp-->
+              <img src="" alt="" />
+              <!-- Link para entrar em Contato -->
+              <a class="button" href="#">Entrar em contato</a>
+
+              <p>11 99845-6754</p>
+              <p>R. Amauri Souza, 346</p>
+              <p>contato@beautysalon.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Divisão entre Contact e Footer -->
+      <div class="divider"></div>
+
+      <section class="section" id="footer">
+        <!---->
+        <div class="container grid">
+          <div class="text">
+            <!-- Link/Título da Página, com classe: "logo"-->
+            <h1 class="logo">Beauty<span>Salon.</span></h1>
+
+            <!-- Conteúdo do Footer -->
+            <p>@2021Beautysalon.</p>
+            <p>Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

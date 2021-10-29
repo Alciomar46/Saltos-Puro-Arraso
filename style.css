@@ -1,0 +1,420 @@
+/* ========== RESTANDO TODA A PÁGINA ========== */
+* {
+  /* Setamos o Tamanho das Margens de Todas as Caixas da Página */
+  margin: 0;
+
+  /* Setamos o Preenchimento da Página */
+  padding: 0;
+
+  /* Setamos o Dimensionamento das Bordas da Página em "Bordas da Caixa" */
+  box-sizing: border-box;
+}
+/* Resetando o Estilo do menu */
+ul {
+  /* Retirando os Pontinho de Lista Padrão */
+  list-style: none;
+}
+
+/* Retirar de Todos os Links as Estilizações Padrão */
+a {
+  text-decoration: none;
+}
+
+/* Configurar a Imagem da Página */
+img {
+  /* Setamos a Larguara da Página */
+  width: 100%;
+  /* Setamos a Altura da Página */
+  height: auto;
+}
+
+/* ========== VARIÁVEIS ========== */
+/* Criação das Variáveis que Serão Utilizadas */
+:root {
+  /*  */
+  --header-height: 4.5rem;
+
+  /* Cores */
+  --hue: 500;
+  /* HSL Color Mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+
+/* ========== BASE ========== */
+/* Configurando o Corpo da Página */
+body {
+  /* Configurando a Fonte em Peso, Tamanho e Família de Fonte */
+  font: 400 1rem 'DM Sans', sans-serif;
+  /* Configurando a Cor da Fonte do Texto */
+  color: var(--text-color);
+  /* Configurando a Cor de Fundo */
+  background: var(--body-color);
+  /* Afinar a Fonte Ultilizada */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Configurando o Título da Página */
+.title {
+  /* Configurando a Fonte em Peso, Tamanho e Família de Fonte do Título */
+  font: 700 1.875rem 'Poppins', sans-serif;
+  /* Configurando a Cor da Fonte do Título */
+  color: var(--title-color);
+  /* Afinar a Fonte Ultilizada */
+  -webkit-font-smoothing: auto;
+}
+
+.title-menu {
+  /* Configurando a Fonte em Peso, Tamanho e Família de Fonte do Título */
+  font: 700 1.3rem 'Poppins', sans-serif;
+  /* Configurando a Cor da Fonte do Título */
+  color: var(--title-color);
+  /* Afinar a Fonte Ultilizada */
+  -webkit-font-smoothing: auto;
+}
+
+/* Configurando o Botão da Página */
+.button {
+  /* Setamos a Cor de Fundo */
+  background: var(--base-color);
+  /* Setamos a Cor do Texto */
+  color: var(--text-color-light);
+  /* Setamos a Altura */
+  height: 3.5rem;
+  /* Setamos a Forma do Display */
+  display: inline-flex;
+  /* Alinhamos no Centro */
+  align-items: center;
+  /* Setamos o Espaço de Preenchimento */
+  padding: 0 2rem;
+  /* Arredondamos as Bordas */
+  border-radius: 0.5rem;
+  /* Configurando a Fonte em Peso, Tamanho e Família de Fonte do Botão */
+  font: 500 1rem 'DM Sans', sans-serif;
+  /* Tempo de Transição no Momento em que um Mouse Passar por Cima do Botão */
+  transition: background 0.3s;
+}
+
+/* Configurar a Ação de Passar o Mouse e Mudar a Cor de Fundo do Botão */
+.button:hover {
+  /* Setamos a Cor de Fundo a Ser Realçado ao Passar o Mouse */
+  background: var(--base-color-alt);
+  /*  */
+}
+
+/* Configuração da Linha de Separação Entre HOME e ABOUT */
+.divider {
+  /* Setamos a Altura */
+  height: 2px;
+  /* Setamos a Cor de Fundo da Linha em Gradativo */
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
+}
+
+/* ========== LAYOUT ========== */
+/* Configuração da Caixa que Contém a Logo da Página */
+.container {
+  /* Setamos as Margens do Lado Esquerdo da Página */
+  margin-left: 1.5rem;
+
+  /* Setamos as Margens do Lado Direito da Página */
+  margin-right: 1.5rem;
+}
+
+.grid {
+  /* Habilitar Funções do Display */
+  display: grid;
+  /* Setamos uma Separação Entre a Imagem e o Texto da Página */
+  gap: 3rem;
+}
+
+/*  */
+.section {
+  /*  */
+  padding: 2rem 0;
+}
+
+/* Configurações do Cabeçalho da Página */
+#header {
+  /* Criando um Linha Entre o Cabeçalho e a Imagem, com Tamanho, Forma e Cor */
+  border-bottom: 2px solid var(--base-color);
+  /* Criando um espaçamento Entre a linha Criada e a imagem */
+  margin-bottom: 2rem;
+  /* Ajustar a Página à Tela que Está Sendo Exibido */
+  display: flex;
+
+  /* == Prendendo o "header" lá em Cima == */
+  /* Setamos a Largura */
+  width: 100%;
+  /* Setamos o Cabeçalho na Posição Fixa */
+  position: fixed;
+  /* Deslocamos P/ Cima */
+  top: 0;
+  /* Deslocamos P/ Esquerda */
+  left: 0;
+  /* Setamos a Prioridade de Exibição */
+  z-index: 100;
+  /* Setamos a Cor */
+  background-color: var(--body-color);
+}
+
+/* Conteúdo que Vai Abaixo do Cabeçalho */
+main {
+  /* Setamos a Altura da Margem Somado a +2rem */
+  margin-top: calc(var(--header-height) + 2rem);
+}
+
+/* ========== LOGO ========== */
+/* Configuração da logo da Página */
+.logo {
+  /* Configurando a Fonte em Peso, Tamanho e Família de Fonte da Logo */
+  font: 700 1.31rem 'Poppins', sans-serif;
+  /* Configurando a Cor da Fonte da Logo */
+  color: var(--title-color);
+}
+
+.logo span {
+  /* Configurando a Cor da Fonte do Título */
+  color: var(--base-color);
+}
+
+/* ========== NAVIGATION OU NAVEGAÇÃO DOS MENUS ========== */
+/* Configuração do "nav" que é o Cabeçalho da Página */
+nav {
+  /* Setamos do "root" a Altura da caixa de nome "Header" */
+  height: var(--header-height);
+  /* Setamos a Largura */
+  width: 100%;
+  /* Setamos a Tela em Modo Flex */
+  display: flex;
+  /* Alinhar Todos os Itens do Cabeçalho de Forma Central */
+  align-items: center;
+  /* Alinhamos as Duas Caixas Uma Oposta à Outra nas Extremidades */
+  justify-content: space-between;
+}
+
+/* Navigação dos Itens do Menu*/
+nav ul li {
+  /* Alinhamo o conteúdo dos Itens do Menu no Centro */
+  text-align: match-parent;
+}
+
+/* Itens do Menu */
+nav ul li a {
+  /* Tempo que Levará P/ a Cor do Item Mudar Quando o Mouse Estiver em Cima */
+  transition: 0.3s;
+  /*  */
+  position: relative;
+}
+
+/* Estilização dos Itens do Menu ao Passar o Mouse por Cima */
+nav ul li a:hover {
+  color: var(--base-color-alt);
+}
+
+/* Configuração do que Ocorre Antes do Mouse Passar por Cima de Algum Item do Menu */
+nav ul li a::after {
+  /* Setamos o Conteúdo */
+  content: '';
+  /* Setamos Largura */
+  width: 0%;
+  /* Setamos a Altura */
+  height: 2px;
+  /* Setamos a Cor */
+  background: var(--base-color);
+  /* Configuramos a Posição P/ Absoluta */
+  position: absolute;
+  /* Deslocamos P/ Esquerda em 0 */
+  left: 0;
+  /* Deslocamos o Fundo */
+  bottom: -0.5rem;
+  /* Setamos o Tempo que Levará P/ Acontecer a Transição */
+  transition: width 0.4s;
+}
+
+/* Configuração do que Ocorre Após o Mouse Passar por Cima de Algum Item do Menu */
+nav ul li a:hover::after {
+  /* Setamos a Largura Após o Mouse Passar por Cima */
+  width: 100%;
+}
+
+/* Navegação do Menu */
+nav .menu {
+  /* Setamos a Opacidade dos Itens do Menu em 0 */
+  opacity: 0;
+  /*  Setamos a Visibilidade dos Itens do Menu de Forma Escondida */
+  visibility: hidden;
+}
+
+/* Mostrar Menu */
+nav.show .menu {
+  /* Setamos a Opacidade dos Itens do Menu no Momento do Aparecimento do Menu */
+  opacity: 1;
+  /* Setamos a Visibilidade dos Itens do Menu no Momento do Aparecimento do Menu em Visível */
+  visibility: visible;
+  /* Setamos a Cor de Fundo do Menu no Momento do Aparecimento do Menu */
+  background: var(--base-color-second);
+  /* Setamos a Altura do Menu */
+  height: 32vh;
+  /* Setamos a Largura do Menu */
+  width: 35vw;
+  /* Setamos a Posição do Menu */
+  position: fixed;
+  /* Deslocamos P/ Cima em 0 */
+  top: 9%;
+  /* Deslocamos P/ Esquerda em 0 */
+  left: 64%;
+  /* Setamos o Tamanho da Tela de Exibição de Acordo com o "grid" (Linha 154) */
+  display: grid;
+  /* Centralizamos o Conteúdo da Página no Centro (a Função irá Calcular o Tamanho da Tela e Centralizar Tudo */
+  place-content: center;
+}
+
+/* Navegação do Menu */
+nav.show ul.grid {
+  /* Setamos o Espaçamento Entre os Itens do Menu */
+  gap: 1.5rem;
+}
+
+/* ========== HOME ========== */
+
+/*  */
+#home,
+#about,
+#services,
+#testimonials,
+#contact {
+  /* Configuramos a Página P/ que ela se Adapte ao Tamanho da Tela */
+  overflow: hidden;
+  /* Configurando as Margens da Home */
+  margin: 0;
+}
+
+/* Configuração da Imagem de Home */
+#home .image {
+  /* Setamos a Posição da Imagem de Forma Relativa */
+  position: relative;
+}
+
+/* Criação de um Elemento Fictício Antes da Imagem */
+#home .image::before {
+  /* Conteúdo */
+  content: '';
+  /* Setamos a Altura */
+  height: 100%;
+  /* Setamos o Comprimento */
+  width: 100%;
+  /* Setamos a Cor */
+  background: var(--base-color-second);
+  /* Setamos a Posição de Forma Absoluta*/
+  position: absolute;
+  /* Deslocamos P/ Cima */
+  top: -16.8%;
+  /* Deslocamos P/ Esquerda */
+  left: 16.7%;
+  /* Setamos a Prioridade de Exibição */
+  z-index: 0;
+}
+
+/* Configuração da Imagem */
+#home .image img {
+  /* Setamos a Posição da Imagem de Forma Relativa */
+  position: relative;
+  /* Deslocamos a Imagem P/ Direita */
+  right: 2.93rem;
+}
+
+/* Arredondamento das Bordas da Imagem e do Elemente Fictício */
+#home .image::before,
+#home .image img {
+  /* Arredondamento das boras */
+  border-radius: 0.25rem;
+}
+
+/* Configuração da Imagem de About */
+#about .image {
+  /* Setamos a Posição da Imagem de Forma Relativa */
+  position: relative;
+}
+
+/* Criação de um Elemento Fictício Antes da Imagem */
+#about .image::before {
+  /* Conteúdo */
+  content: '';
+  /* Setamos a Altura */
+  height: 100%;
+  /* Setamos o Comprimento */
+  width: 100%;
+  /* Setamos a Cor */
+  background: var(--base-color-second);
+  /* Setamos a Posição de Forma Absoluta*/
+  position: absolute;
+  /* Deslocamos P/ Cima */
+  top: -16.8%;
+  /* Deslocamos P/ Esquerda */
+  left: 16.7%;
+  /* Setamos a Prioridade de Exibição */
+  z-index: 0;
+}
+
+/* Configuração da Imagem */
+#about .image img {
+  /* Setamos a Posição da Imagem de Forma Relativa */
+  position: relative;
+  /* Deslocamos a Imagem P/ Direita */
+  right: 2.93rem;
+}
+
+/* Arredondamento das Bordas da Imagem e do Elemente Fictício */
+#about .image::before,
+#about .image img {
+  /* Arredondamento das boras */
+  border-radius: 0.25rem;
+}
+
+/* Configuração do Texto */
+#home,
+#about,
+#services,
+#testimonials,
+#contact,
+#footer .text {
+  /* Setamos as Margens do Lado Esquerdo da Página */
+  margin-left: 1.5rem;
+
+  /* Setamos as Margens do Lado Direito da Página */
+  margin-right: 1.5rem;
+
+  /* Alinhar os Textos de Forma Central */
+  text-align: center;
+}
+
+/* Configurando a Margem do Título */
+#home,
+#about,
+#services,
+#testimonials,
+#contact,
+#footer .text h2 {
+  /* Setamos a Margem de fundo do Título */
+  margin-bottom: 1rem;
+}
+
+/* Espaçamento de Altura do Texto do Título */
+#home,
+#about,
+#services,
+#testimonials,
+#contact,
+#footer .text p {
+  /* Setamos o Espaçamento da Margem de Fundo do Texto */
+  margin-bottom: 2rem;
+}
